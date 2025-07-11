@@ -25,7 +25,7 @@ Content-Type: application/json
 
 ###
 
-@roomId = {{getRooms.response.body.$.roomId}}
+@roomId = {{createRoom.response.body.$.roomId}}
 
 ###
 
@@ -37,10 +37,9 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 # Create question
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/f994884a-550b-4bba-960c-9773c62fa8d5/questions
 Content-Type: application/json
 
 {
-    "question": "Qual o conceito de X dentro de Y?",
-    "description": "Essa é uma sala de teste"
+    "question": "O que é Vue.js?"
 }
